@@ -1,13 +1,288 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    margin:0;
+    background: #4B9CD3;
+}
+
+
+header{
+    height: 10vh;
+    padding: 1.5vh 0;
+}
+
+footer{
+    height: 10vh;
+}
+
+#map{
+    width: 100vw;
+    height: 80vh;
+    margin-top: 0vh;
+    display: flex;
+}
+
+.css-1g12qau-MuiSvgIcon-root-MuiNativeSelect-icon{
+    /* background: #fff; */
+    color: #EF8549 !important;
+}
+.css-1636szt{
+    color: #EF8549 !important;
+}
+
+select{
+    /* padding-right: 0px !important; */
+    text-align: center;
+}
+
+.marker{
+    cursor: pointer;
+}
+
+.infoWindow-title{
+    font-size: 24px;
+    font-weight: bold;
+    color: #EF8549;
+}
+
+.infoWindow-link{
+    text-decoration: underline;
+    font-weight:600;
+    color: #297A31;
+}
+
+
+.infoWindow-content>li{
+    margin: 5px 0;
+    font-weight:400;
+    font-size: 14px;
+}
+
+.infoWindow-content>li:last-of-type{
+    margin: 15px 0 0;
+}
+
+.infoWindow-text-bold{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.park-list.infoWindow-content{
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.park-list.infoWindow-content>li{
+    font-size: 16px;
+}
+
+.park-list-title{
+    font-size: 20px;
+    font-weight: bold;
+    color: #99542C;
+    line-height: 24px;
+    margin-left: 3px;
+    width: 90%;
+}
+.park-list-img{
+    margin-top: 10px;
+    width: 90%;
+}
+.parklist-title-highlight{
+    text-decoration: underline;
+    color: #99542C;
+}
+
+
+.img-container{
+    display: inline-block;
+    width: 90%;
+    margin-left: 5%;
+    height: 60vh;
+    position: relative;
+}
+.pop-window-img{
+    margin: 0 auto;
+    height:100%;
+}
+
+.carousel-main{
+    height: 68vh;
+}
+
+.img-caption{
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: .9rem;
+}
+
+.ops-hr-text{
+    margin-top: 15px;
+    font-size: .8rem;
+    font-style: italic;
+    color:#99542C;
+}
+
+.popup-infoWindow-title-container{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    width: 90%;
+}
+
+.loc-icon{
+    transform: scale(0.8);
+}
+
+
+.popup-infoWindow-title{
+    transition: .3s;
+    font-size: 1.2rem;
+    border-bottom: 1px solid transparent;
+    font-weight:600;
+    margin-left: 6px;
+}
+.popup-infoWindow-title:hover{
+    border-bottom: 1px solid #16411A;
+}
+
+.drawer{
+    width: 40vw;
+}
+
+.park-list-item:first-of-type{
+    margin-top: 8vh;
+}
+
+.parklist-header-container{
+    position: fixed;
+    width: 40vw;
+    height: 10vh;
+    top:0;
+    z-index:9999;
+}
+.parklist-header-sub-container{
+    display: inline-block;
+    align-self: center;
+}
+
+#customized-dialog-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.park-list-close-btn{
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.location-icon-btn{
+    background: url('assets/location.svg') center no-repeat;
+    background-size: 35%;
+    width: 39px;
+    height: 39px;
+}
+
+/* Carousel arrow key container */
+/* left arrow */
+.css-hn784z{
+    /* border: 1px solid #333; */
+    height: 88% !important;
+}
+/* right arrow */
+.css-1abc02a{
+    /* border: 1px solid #333; */
+    height: 88% !important;
+}
+
+
+.contact-list-title{
+    font-weight: bold;
+    font-size: .85rem;
+    margin-top: 2px;
+    display: inline-block;
+}
+
+/* Responsive styling */
+@media (min-width:1536px) {
+    .pop-window-img{
+        height: 100%;
+    }
+    .img-container{
+        display: inline-block;
+        width: 90%;
+        margin-left: 5%;
+        height: 48vh;
+        position: relative;
+    }
+    .carousel-main{
+        height: 52vh;
+    }
+    header{
+        height: 8vh;
+    }
+    
+    footer{
+        height: 7vh;
+    }
+    
+    #map{
+        height: 85vh;
+    }
+    .parklist-header-container{
+        height: 8vh;
+    }
+}
+
+@media (max-width:992px) {
+    .drawer{
+        width: 80vw;
+    }
+    .parklist-header-container{
+        width: 80vw;
+    }
+}
+
+@media (max-width:560px) {
+    .drawer{
+        width: 100vw;
+    }
+    .parklist-header-container{
+        width: 100vw;
+    }
+    .infoWindow-btn-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .img-container{
+        width: 100%;
+        margin-left: 0%;
+        height: 70vh;
+    }
+    .carousel-main{
+        height: 79vh;
+    }
+    .location-icon-btn{
+        background: url('assets/location.svg') center no-repeat;
+        background-size: contain;
+        font-size: 14px;
+        width: 100%;
+        height: 30px;
+        border-radius: 0 !important;
+    }
+    .location-icon-btn>.css-8je8zh-MuiTouchRipple-root{
+        width: 100%;
+    }
 }
