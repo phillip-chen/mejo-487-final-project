@@ -128,7 +128,7 @@ let Map = ({setfullParkDataArr,fullParkDataArr, phoneNumFormat, setOpen, clicked
 
       // Get User's current location
       // Define API request
-      const apiKey = 'xAudfXRJWIGhT6jm7qE00C1D9lVlebw9UX4jqpYl'
+      const apiKey = "[Your National Park Service API Key (It's free, just sign up)]"
       
       let url =null;
 
@@ -198,7 +198,7 @@ let Map = ({setfullParkDataArr,fullParkDataArr, phoneNumFormat, setOpen, clicked
 
   return (
     <LoadScript
-      googleMapsApiKey="AIzaSyArLXjtBpGfm8qxypLLYmhjsFsGNnG0vRY"
+      googleMapsApiKey= "[Your Google API Key]"
     >
       <GoogleMap
         mapContainerStyle={containerStyle}
